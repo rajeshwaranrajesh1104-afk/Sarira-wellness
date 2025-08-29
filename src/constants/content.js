@@ -18,6 +18,125 @@ export const SITE_CONFIG = {
   }
 };
 
+export const PRIVACY_POLICY = {
+  title: "Privacy Policy",
+  lastUpdated: "August 29, 2025",
+  introduction: "Welcome to SARIRA. Your privacy is important to us, and we are committed to protecting the personal information you share with us.",
+  sections: [
+    {
+      title: "1. Information We Collect",
+      content: `When you use our website or place an order, we may collect the following types of information:
+
+• Personal Information: Name, phone number, email address, shipping address, billing address
+• Payment Information: Processed securely via third-party payment gateways (we do not store your card details)
+• Order History: Items purchased, quantity, order value, and delivery records
+• Device/Usage Data: IP address, browser type, referring URL, and time spent on pages (for analytics)
+• Communication: Emails, WhatsApp, or feedback shared with us`
+    },
+    {
+      title: "2. How We Use Your Information",
+      content: `We use your data to:
+
+• Process and fulfill your orders
+• Send order confirmations and delivery updates
+• Provide customer support
+• Send promotional emails (only with your consent)
+• Improve our website, services, and user experience
+• Prevent fraud and ensure secure transactions`
+    },
+    {
+      title: "3. Sharing Your Information",
+      content: `We do not sell, rent, or trade your personal information.
+
+We only share it with:
+• Logistics and courier partners (to deliver your order)
+• Payment gateways (to securely process your transaction)
+• Email/SMS marketing tools (only if you opt-in for updates)
+
+All partners are expected to comply with strict data protection standards.`
+    },
+    {
+      title: "4. Cookies & Tracking",
+      content: "Our website uses cookies to enhance your browsing experience and help us understand user behavior. You can adjust your browser settings to disable cookies at any time, although this may impact site functionality."
+    },
+    {
+      title: "5. Data Security",
+      content: "We use industry-standard encryption and security protocols to protect your data from unauthorized access, misuse, or disclosure. Your payment details are handled by trusted third-party gateways that are PCI-DSS compliant."
+    },
+    {
+      title: "6. Your Rights",
+      content: `You may:
+• Request access to your personal data
+• Ask for corrections or deletions
+• Opt out of promotional emails at any time
+• Request account deactivation
+
+For any of the above, email us at sariranutrition@gmail.com.`
+    },
+    {
+      title: "7. Children's Privacy",
+      content: "Our products are intended for purchase by adults. We do not knowingly collect personal data from children under 18."
+    },
+    {
+      title: "8. Policy Updates",
+      content: "We may update this Privacy Policy from time to time. The latest version will always be available on our website, and your continued use indicates acceptance."
+    }
+  ],
+  contactInfo: {
+    title: "Contact Us",
+    subtitle: "For questions, feedback, or privacy concerns, contact:",
+    company: "SARIRA Wellness",
+    email: "sariranutrition@gmail.com",
+    phone: "+91-7010422748",
+    hours: "Customer Support Hours: Monday to Saturday, 10 AM - 6 PM IST"
+  }
+};
+
+export const SHIPPING_DELIVERY = {
+  title: "Shipping & Delivery",
+  lastUpdated: "August 28, 2025",
+  sections: [
+    {
+      title: "1. Shipping Coverage & Charges",
+      content: `We deliver across India (local areas in Tamil Nadu included), excluding certain remote regions.
+
+Free shipping on prepaid orders above ₹800.
+
+For orders below ₹800, delivery charges vary by location.`
+    },
+    {
+      title: "2. Order Processing Time",
+      content: `Orders placed before 5 PM are processed within 1 business day.
+
+Weekends & public holidays are not processing days.`
+    },
+    {
+      title: "3. Delivery Timeline",
+      content: `Estimated delivery: 6 – 10 working days across India, depending on your location.
+
+Courier tracking via email or SMS provided at dispatch.`
+    },
+    {
+      title: "4. Failed Deliveries or Erroneous Address",
+      content: `Customers are responsible for reshipping fees if the order is returned due to incomplete or incorrect address.
+
+SARIRA is not liable for lost packages from address errors.`
+    },
+    {
+      title: "5. Order Cancellation & Refund",
+      content: `If the order is cancelled before dispatch or cannot be delivered to your location, we issue a full refund—including shipping charges—within 48 business hours of processing.`
+    }
+  ],
+  contactInfo: {
+    title: "Need Help?",
+    subtitle: "Our support team is here to assist you",
+    content: "If you have any questions about shipping or delivery, please don't hesitate to contact us:",
+    email: "sariranutrition@gmail.com",
+    phone: "+91-7010422748",
+    hours: "Customer Support Hours: Monday to Saturday, 10 AM - 6 PM IST"
+  }
+};
+
 export const NAVIGATION = {
   main: [
     { href: '/#home', label: 'Home' },
@@ -27,10 +146,10 @@ export const NAVIGATION = {
     { href: '/#wellness-ai', label: 'Wellness AI'}
   ],
   footer: [
-    { href: '/#home', label: 'Home' },
+    { href: '#home', label: 'Home', scrollToId: 'home-section' },
     { href: '/product', label: 'Product' },
     { href: '/store-locator', label: 'Store Locator' },
-    { href: '/#faq', label: 'FAQ' },
+    { href: '#faq', label: 'FAQ', scrollToId: 'faq-section' },
   ],
   policies: [
     { href: '/shipping-and-delivery', label: 'Shipping & Delivery' },
@@ -57,7 +176,7 @@ export const HERO = {
 };
 
 export const PRODUCT = {
-  name: "SARIRA Fig Malt",
+  name: "Fig Malt - Nature's Pure Goodness",
   subtitle: "Made with Organic Figs & Premium Nuts",
   price: "₹299",
   originalPrice: "₹349",
@@ -75,14 +194,14 @@ export const PRODUCT = {
     { text: "Fertility Booster", icon: "Leaf" },
     { text: "Postpartum Nourishment", icon: "HeartHandshake" },
     { text: "Improves Gut Health", icon: "Brain" },
-    { text: "Naturally Sweet, No Added Sugar", icon: "Leaf" },
-    { text: "Rich in Iron & Fiber", icon: "ShieldCheck" }
+    { text: "Naturally Sweet, No Added Sugar", icon: "ShieldCheck" },
+    { text: "Rich in Iron & Fiber", icon: "Leaf" }
   ],
   badges: ["Organic", "No Added Sugar", "Traditional Recipe"],
   testimonial: "This was a game-changer for my energy levels! A must-have for mothers. - Priya, Chennai"
 };
 
-export const INGREDIENTS = {
+export const INGREDIENTS= {
   title: "The Power of Our Ingredients",
   subtitle: "Simple, pure, and chosen with purpose.",
   list: [
@@ -175,8 +294,8 @@ export const TESTIMONIALS = {
 export const ABOUT = {
   title: "Our Story: From Ancient Wisdom to Modern Wellness",
   quote: {
-    tamil: "அந்தணர்நூல் வழி நின் றார்அத்திப்பழம் பபால்",
-    english: "A Sangam poetry metaphor comparing pure character to a fig's sweetness."
+    tamil: "அன்பும் பாரம்பரியமும் கலந்த நலம்",
+    english: "Wellness blended with love and tradition"
   },
   story: [
     "SARIRA is born from a love for pure, traditional wellness. Our founder, inspired by the wisdom of Tamil grandmothers, envisioned a brand that brings ancient recipes to modern lives. We believe in food that heals, prepared with intention and care.",
@@ -184,6 +303,7 @@ export const ABOUT = {
   ]
 };
 
+// Updated Journal section
 export const JOURNAL = {
   title: "SARIRA Journal – Where Food Meets Philosophy",
   subtitle: "Discover the stories behind our ingredients and traditions",
@@ -286,36 +406,48 @@ export const WELLNESS_AI = {
 export const RECIPES = {
   title: "One Spoon, Many Possibilities",
   subtitle: "Explore creative, everyday ways to use SARIRA Fig Malt",
+  animation: {
+    floating: {
+      initial: { y: 0 },
+      animate: { y: [-10, 10, -10], transition: { duration: 4, repeat: Infinity, ease: "easeInOut" } }
+    }
+  },
   list: [
     {
       title: "SARIRA Energy Balls",
       description: "No-bake, fiber-rich bite-sized snacks sweetened naturally with figs. Perfect for lunchboxes and pre-workout energy.",
-      image: "src/assets/images/Recipes/SARIRA Energy Balls.jpg"
+      image: "src/assets/images/Recipes/SARIRA Energy Balls.jpg",
+      animation: "floating"
     },
     {
       title: "Wholesome Toast Topper",
       description: "Warm toast with ghee or nut butter finished with a sprinkle of SARIRA Fig Malt for a quick nourishing bite.",
-      image: "src/assets/images/Recipes/Wholesome Toast Topper.jpg"
+      image: "src/assets/images/Recipes/Wholesome Toast Topper.jpg",
+      animation: "floating"
     },
     {
       title: "Nourishing Porridge Mix",
       description: "Stir SARIRA Fig Malt into millet or ragi porridge for a gentle, family-friendly breakfast.",
-      image: "src/assets/images/Recipes/Nourishing Porridge Mix.jpg"
+      image: "src/assets/images/Recipes/Nourishing Porridge Mix.jpg",
+      animation: "floating"
     },
     {
       title: "Classic Warm Fig Malt Drink",
       description: "A daily immunity booster for all ages. Best served warm on an empty stomach to aid absorption and kickstart your day.",
-      image: "src/assets/images/Recipes/Classic Warm Fig Malt Drink.png"
+      image: "src/assets/images/Recipes/Classic Warm Fig Malt Drink.png",
+      animation: "floating"
     },
     {
       title: "Fig Malt Banana Smoothie",
       description: "A cool, creamy, fiber-rich breakfast. Blend one banana, a cup of milk, and a spoonful of SARIRA for a filling start.",
-      image: "src/assets/images/Recipes/Fig Malt Banana Smoothie.png"
+      image: "src/assets/images/Recipes/Fig Malt Banana Smoothie.png",
+      animation: "floating"
     },
     {
       title: "Sugar-Free Fig Malt Muffins",
       description: "Kid-friendly, guilt-free snacks perfect for tiffin boxes. Use SARIRA as a natural sweetener in your favorite muffin recipe.",
-      image: "src/assets/images/Recipes/Sugar-Free Fig Malt Muffins.png"
+      image: "src/assets/images/Recipes/Sugar-Free Fig Malt Muffins.png",
+      animation: "floating"
     }
   ]
 };
@@ -323,30 +455,42 @@ export const RECIPES = {
 export const GALLERY = {
   title: "Our Visual Story",
   subtitle: "A glimpse into the world of SARIRA",
+  animation: {
+    floating: {
+      initial: { y: 0 },
+      animate: { y: [-10, 10, -10], transition: { duration: 4, repeat: Infinity, ease: "easeInOut" } }
+    }
+  },
   images: [
     {
       src: "src/assets/images/gallery/ph01.jpg",
-      alt: "SARIRA lifestyle moment with product in use"
+      alt: "SARIRA lifestyle moment with product in use",
+      animation: "floating"
     },
     {
       src: "src/assets/images/gallery/ph2.jpg",
-      alt: "Close-up of SARIRA ingredients and textures"
+      alt: "Close-up of SARIRA ingredients and textures",
+      animation: "floating"
     },
     {
       src: "src/assets/images/gallery/ph3.jpg",
-      alt: "Family enjoying SARIRA-inspired nourishment"
+      alt: "Family enjoying SARIRA-inspired nourishment",
+      animation: "floating"
     },
     {
       src: "src/assets/images/gallery/ph04.jpg",
-      alt: "Traditional kitchen scene with SARIRA elements"
+      alt: "Traditional kitchen scene with SARIRA elements",
+      animation: "floating"
     },
     {
       src: "src/assets/images/gallery/ph5.jpg",
-      alt: "Prepared serving showcasing SARIRA Fig Malt"
+      alt: "Prepared serving showcasing SARIRA Fig Malt",
+      animation: "floating"
     },
     {
       src: "src/assets/images/gallery/ph6.jpg",
-      alt: "Natural setting highlighting SARIRA wellness theme"
+      alt: "Natural setting highlighting SARIRA wellness theme",
+      animation: "floating"
     }
   ]
 };
@@ -382,6 +526,120 @@ export const CONTACT = {
       value: "Chennai-600016"
     }
   ]
+};
+
+export const TAMIL_CULTURE = {
+  title: "Rooted in Tamil Tradition",
+  subtitle: "A heritage of holistic wellness",
+  content: [
+    "She trusted her senses, her soil, and the timeless science passed down on banana leaves — not textbooks. To her, wellness was never a trend; it was instinct. Every meal she prepared carried the wisdom of generations before her. You call it functional food. She simply called it breakfast. The West calls it gut health. She just reminded you not to skip vendhaya kanji on Mondays.",
+    "Her kitchen was her pharmacy, her ladle the doctor's tool. A pinch of turmeric soothed inflammation, sukku kaapi awakened the body at dawn, and figs — nature's sweetest gift — nourished strength and fertility. She didn't chase nutrition labels, because she already knew which grain healed, which spice protected, and which fruit gave life.",
+    "What she passed on was more than recipes; it was a philosophy of living. A way where food was love, medicine, and wellness — all in one."
+  ],
+  highlights: [
+    {
+      title: "Ancient Wisdom",
+      description: "Centuries of traditional knowledge passed down through generations"
+    },
+    {
+      title: "Siddha Heritage",
+      description: "Incorporating principles from Tamil's ancient medical system"
+    },
+    {
+      title: "Natural Living",
+      description: "Embracing nature's gifts for holistic wellness"
+    }
+  ]
+};
+
+export const RETURNS_REFUNDS = {
+  title: "Returns & Refunds Policy",
+  lastUpdated: "August 28, 2025",
+  sections: [
+    {
+      title: "1. Eligible Returns",
+      content: "• We accept unopened items in original packaging only, provided they are returned within 7 days of delivery.\n• Guests outside this timeframe or with opened items are not eligible."
+    },
+    {
+      title: "2. Damaged or Incorrect Items",
+      content: "• If you receive a defective, damaged, or incorrect product, contact us within 48 hours with photographic proof. We will arrange a refund or ship a replacement."
+    },
+    {
+      title: "3. Non-Returnable Items",
+      content: "• Opened or used food products.\n• Items damaged due to your fault.\n• Returns made after 7 days of delivery."
+    },
+    {
+      title: "4. Refund Process",
+      content: "Once approved, refunds are processed to the original payment method within 5–7 working days—deducting any return shipping charges if applicable"
+    }
+  ],
+  contactInfo: {
+    title: "📩 Customer Support",
+    subtitle: "Need help?",
+    content: "Reach us at:",
+    email: "📧 sariranutrition@gmail.com",
+    phone: "📞 +91 7010422748 (WhatsApp support available)",
+    hours: "Hours: Mon-Sat, 10 AM – 6 PM"
+  }
+};
+
+export const TERMS_OF_SERVICE = {
+  title: "Terms of Service",
+  lastUpdated: "August 28, 2025",
+  introduction: "Welcome to www.sarirawellness.com (the \"Website\"), operated by SARIRA Wellness. By accessing or using our website, purchasing our products, or interacting with our services, you agree to the following terms and conditions.\nPlease read them carefully before using this site.",
+  sections: [
+    {
+      title: "1. Eligibility",
+      content: "You must be at least 18 years of age to purchase from our website. By using the site, you confirm that you are legally capable of entering into a contract."
+    },
+    {
+      title: "2. Product Information",
+      content: "We make every effort to display product descriptions, ingredients, prices, and images accurately. However, SARIRA does not warrant that all product details are always current or error-free. We reserve the right to modify product specifications without prior notice."
+    },
+    {
+      title: "3. Orders & Payments",
+      content: "All orders placed through the website are subject to acceptance and availability. We reserve the right to refuse or cancel any order for any reason, including pricing errors or stock availability. Payments must be made using approved payment methods (UPI, cards, net banking, etc.). We do not store your payment details."
+    },
+    {
+      title: "4. Shipping & Delivery",
+      content: "Orders are processed within 1–2 business days. Delivery timelines are estimates and not guaranteed. For full details, please refer to our [Shipping Policy]."
+    },
+    {
+      title: "5. Returns & Refunds",
+      content: "We accept returns only in cases of damaged, defective, or incorrect items. Refunds will be processed as per our [Return Policy]. SARIRA reserves the right to reject any return request that does not meet our criteria."
+    },
+    {
+      title: "6. Use of Website",
+      content: "You agree not to misuse the website or its content. You may not:\n• Use the website for unlawful or fraudulent purposes\n• Attempt to gain unauthorized access to our systems\n• Copy, distribute, or reproduce any content without permission"
+    },
+    {
+      title: "7. Intellectual Property",
+      content: "All content on this site — including logos, product descriptions, images, and text — is the property of SARIRA and protected under applicable copyright and trademark laws."
+    },
+    {
+      title: "8. Limitation of Liability",
+      content: "SARIRA shall not be liable for any direct, indirect, incidental, or consequential damages that result from:\n• The use or inability to use the website\n• Product misuse\n• Delays or failure in delivery beyond our control"
+    },
+    {
+      title: "9. Privacy",
+      content: "Your personal information is handled in accordance with our [Privacy Policy]. By using our site, you consent to the collection and use of your data as described there."
+    },
+    {
+      title: "10. Modifications to Terms",
+      content: "We reserve the right to update or change these terms at any time. Continued use of the website after any changes implies acceptance of the new terms."
+    },
+    {
+      title: "11. Governing Law",
+      content: "These Terms shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the jurisdiction of the courts in Chennai, Tamil Nadu."
+    }
+  ],
+  contactInfo: {
+    title: "📩 Contact Us",
+    content: "For questions about these Terms, contact us at:",
+    email: "📧 sariranutrition@gmail.com",
+    phone: "📞+91-7010422748"
+  },
+  footer: "SARIRA – Wellness with Transparency.\nThank you for choosing us to be part of your health journey."
 };
 
 export const IMAGES = {

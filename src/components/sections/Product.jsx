@@ -10,11 +10,11 @@ export function Product() {
   return (
     <section id="product" className="bg-gradient-to-br from-[#F8F5EF] to-[#F0EDE6]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#364A22] mb-4">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#364A22] mb-4 font-headline">
             {PRODUCT.name}
           </h2>
-          <p className="text-xl text-[#5A6B3A]">{PRODUCT.subtitle}</p>
+          <p className="text-xl md:text-2xl text-[#5A6B3A] font-body">{PRODUCT.subtitle}</p>
         </div>
         
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">

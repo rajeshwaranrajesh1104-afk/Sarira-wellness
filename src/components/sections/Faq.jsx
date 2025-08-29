@@ -8,7 +8,7 @@ export function Faq() {
   const visibleFaqs = showAll ? FAQ.items : FAQ.items.slice(0, 5);
 
   return (
-    <section id="faq" className="bg-[#F9F9F9]">
+    <section id="faq-section" className="bg-[#F9F9F9] pt-20 pb-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">

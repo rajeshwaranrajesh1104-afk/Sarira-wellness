@@ -44,9 +44,14 @@ export default {
       },
       keyframes: {
         floating: {
-          '0%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-15px)' },
-          '100%': { transform: 'translateY(0px)' },
+          '0%, 100%': { 
+            transform: 'translateY(0px)',
+            animationTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+          },
+          '50%': { 
+            transform: 'translateY(-10px)',
+            animationTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+          }
         },
       },
       animation: {

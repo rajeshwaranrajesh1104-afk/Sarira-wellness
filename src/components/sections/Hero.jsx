@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import { ShieldCheck, HeartPulse, Baby, Sparkles } from 'lucide-react';
 import { HERO, IMAGES } from '@/constants/content';
+import heroBg from '@/assets/images/BG01.jpg';
 
 const iconMap = {
   HeartPulse,
@@ -15,6 +16,8 @@ export function Hero() {
   const [headlineIndex, setHeadlineIndex] = useState(0);
   const [typedHeadline, setTypedHeadline] = useState('');
   const [isMounted, setIsMounted] = useState(false);
+  
+  // Adding home-section ID for smooth scrolling
 
   useEffect(() => {
     setIsMounted(true);
@@ -58,9 +61,17 @@ export function Hero() {
   }, [isMounted, headlineIndex]);
 
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-gradient-to-br from-[#364A22] via-[#4A5F2E] to-[#E38A30]">
-      {/* Background pattern overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#364A22]/90 via-[#4A5F2E]/80 to-[#E38A30]/70"></div>
+    <section id="home-section" className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBg} 
+          alt="Hero Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#364A22]/90 via-[#4A5F2E]/80 to-[#E38A30]/70 backdrop-blur-[2px]"></div>
       
       <div className="container mx-auto px-4 flex flex-col items-center justify-center relative z-10 gap-12">
         {/* Centered text content */}
@@ -68,7 +79,7 @@ export function Hero() {
           <p className="text-4xl md:text-5xl lg:text-6xl font-headline text-white mb-4">
             Welcome to SARIRA Wellness
           </p>
-          <h1 className="text-white font-body mb-2 text-2xl h-8">
+          <h1 className="text-[#E38A30] font-body mb-2 text-2xl h-8">
             <span>{typedHeadline}</span>
             <span className="animate-pulse">|</span>
           </h1>
@@ -81,14 +92,14 @@ export function Hero() {
             <Button asChild size="lg" className="bg-[#E38A30] text-white hover:bg-[#E38A30]/90 shadow-lg">
               <Link to="/product">Try Fig Malt</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-[#F8F5EF] text-[#F8F5EF] hover:bg-[#F8F5EF] hover:text-[#364A22] shadow-lg">
+            <Button asChild size="lg" variant="custom" className="!bg-[#E38A30] !text-white hover:!bg-[#364A22] !shadow-lg transition-all duration-300">
               <Link to="/tamil-culture">Learn our story</Link>
             </Button>
           </div>
           
           <div className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-white/20 rounded-xl p-6 shadow-lg border border-white/30 mb-12 backdrop-blur-sm animate-floating transition-all duration-300 hover:shadow-xl">
-              <p className="text-center text-lg font-semibold text-white">
+            <div className="bg-white/20 rounded-xl p-6 shadow-lg border border-white/30 mb-12 backdrop-blur-sm animate-[floating_3s_ease-in-out_infinite] hover:shadow-xl">
+              <p className="text-center text-lg font-semibold text-[#FFFFFF]">
                 {HERO.guarantee}
               </p>
             </div>

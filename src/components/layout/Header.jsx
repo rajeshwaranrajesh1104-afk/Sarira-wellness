@@ -51,7 +51,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={handleHashNav(link.href)}
-                className="text-primary hover:text-accent transition-colors duration-300 font-medium"
+                className={`${location.pathname === '/' ? (isScrolled ? 'text-primary hover:text-[#E38A30]' : 'text-white hover:text-[#E38A30]') : 'text-[#364A22] hover:text-[#E38A30]'} transition-colors duration-300 font-medium`}
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export function Header() {
               <Link 
                 key={link.href} 
                 to={link.href} 
-                className="text-primary hover:text-accent transition-colors duration-300 font-medium"
+                className={`${location.pathname === '/' ? (isScrolled ? 'text-primary hover:text-[#E38A30]' : 'text-white hover:text-[#E38A30]') : 'text-[#364A22] hover:text-[#E38A30]'} transition-colors duration-300 font-medium`}
               >
                 {link.label}
               </Link>

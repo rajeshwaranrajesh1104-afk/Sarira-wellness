@@ -47,13 +47,11 @@ export function Journal() {
               <div className="p-1 h-full">
                 <Card className="overflow-hidden h-full flex flex-col bg-gradient-to-br from-white to-secondary/20">
                   <CardHeader className="p-0">
-                    <Link to={post.link}>
-                      <img 
-                        src={post.image} 
-                        alt={post.title} 
-                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105" 
-                      />
-                    </Link>
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      className="w-full h-48 object-cover" 
+                    />
                   </CardHeader>
                   <CardContent className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-primary mb-3 h-20 leading-tight">
@@ -62,28 +60,6 @@ export function Journal() {
                     <p className="text-muted-foreground mb-4 h-24 overflow-hidden flex-grow leading-relaxed">
                       {post.description}
                     </p>
-                    <div className="mt-auto">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button variant="link" className="font-semibold text-accent p-0 h-auto hover:underline" aria-label={`Read more about ${post.title}`}>
-                            Read More →
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="animate-fadeIn">
-                          <DialogHeader>
-                            <DialogTitle>{post.title}</DialogTitle>
-                            <DialogDescription>
-                              {post.description}
-                            </DialogDescription>
-                          </DialogHeader>
-                          <div className="mt-6 flex justify-end gap-3">
-                            <DialogClose className="px-4 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600" aria-label="Close">
-                              Close
-                            </DialogClose>
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    </div>
                   </CardContent>
                 </Card>
               </div>

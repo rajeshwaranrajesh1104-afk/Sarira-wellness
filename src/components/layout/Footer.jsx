@@ -2,12 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramIcon, YoutubeIcon, WhatsappIcon } from '@/components/icons/IconComponents';
 import { Mail, Phone, MapPin, Heart } from 'lucide-react';
-import { SariraLogo } from '@/components/icons/SariraLogo';
+import SariraLogoImg from '@/assets/images/SARIRA-03.png';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { NAVIGATION, SITE_CONFIG } from '@/constants/content';
 
 export function Footer() {
+  const handleSmoothScroll = (e, scrollToId) => {
+    if (scrollToId) {
+      e.preventDefault();
+      const element = document.getElementById(scrollToId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  };
+
   return (
     <footer id="contact" className="bg-primary text-primary-foreground/80">
       <div className="container mx-auto px-4 py-16">
@@ -15,7 +28,7 @@ export function Footer() {
           {/* Column 1: Brand Identity */}
           <div className="space-y-6">
             <Link to="/" className="mb-4 inline-block">
-              <SariraLogo isFooter={true} className="h-12 text-primary-foreground" />
+              <img src={SariraLogoImg} alt="SARIRA" className="h-12 w-auto" />
             </Link>
             <p>
               Functional wellness rooted in Tamil tradition, blended for today's lifestyle. Nourishing families with nature's goodness.
@@ -28,9 +41,19 @@ export function Footer() {
             <ul className="space-y-3">
               {NAVIGATION.footer.map(link => (
                 <li key={link.href}>
-                  <Link to={link.href} className="hover:text-accent transition">
-                    {link.label}
-                  </Link>
+                  {link.scrollToId ? (
+                    <a 
+                      href={link.href}
+                      className="hover:text-accent transition cursor-pointer"
+                      onClick={(e) => handleSmoothScroll(e, link.scrollToId)}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={link.href} className="hover:text-accent transition">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
