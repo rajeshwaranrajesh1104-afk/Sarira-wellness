@@ -60,6 +60,18 @@ export function Journal() {
                     <p className="text-muted-foreground mb-4 h-24 overflow-hidden flex-grow leading-relaxed">
                       {post.description}
                     </p>
+                    {/* Show More Button */}
+                    <div className="mt-auto">
+                      <Button 
+                        asChild 
+                        size="sm" 
+                        className="w-full bg-[#E38A30] text-white hover:bg-[#E38A30]/90 transition-all duration-300 transform hover:scale-105"
+                      >
+                        <Link to={post.link}>
+                          Show More
+                        </Link>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </div>

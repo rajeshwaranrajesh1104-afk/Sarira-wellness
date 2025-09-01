@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/Dialog';
-import { Home, Store, Instagram, Facebook, Utensils, CheckCircle2 } from 'lucide-react';
+import { Home, Store, Instagram, Facebook, Utensils, CheckCircle2, X } from 'lucide-react';
 import { COMMUNITY, SITE_CONFIG } from '@/constants/content';
 
 const iconMap = {
@@ -14,6 +13,7 @@ const iconMap = {
 
 export function Community() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showResellerPopup, setShowResellerPopup] = useState(false);
 
   return (
     <section id="community" className="bg-white">
@@ -54,41 +54,13 @@ export function Community() {
                       </Button>
                     </div>
                     <div className="mt-auto">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
-                            Become a Reseller
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="sm:max-w-[525px]">
-                          <DialogHeader>
-                            <DialogTitle className="text-2xl text-primary">Partner with SARIRA</DialogTitle>
-                            <DialogDescription>
-                              Let's build a healthier community — together.
-                            </DialogDescription>
-                          </DialogHeader>
-                          <div className="py-4">
-                            <div className="mb-6">
-                              <h4 className="font-bold text-lg text-primary mb-3">Why Partner with Us?</h4>
-                              <ul className="space-y-2 text-muted-foreground">
-                                <li className="flex items-start">
-                                  <CheckCircle2 className="w-5 h-5 text-accent mr-2 mt-0.5 shrink-0" />
-                                  Attractive wholesale pricing
-                                </li>
-                                <li className="flex items-start">
-                                  <CheckCircle2 className="w-5 h-5 text-accent mr-2 mt-0.5 shrink-0" />
-                                  Clean-label, fast-moving wellness product
-                                </li>
-                              </ul>
-                            </div>
-                            <Button asChild size="lg">
-                              <a href={`mailto:${SITE_CONFIG.contact.email}`}>
-                                Become a Reseller →
-                              </a>
-                            </Button>
-                          </div>
-                        </DialogContent>
-                      </Dialog>
+                      <Button 
+                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-all duration-300" 
+                        size="lg"
+                        onClick={() => setShowResellerPopup(true)}
+                      >
+                        Become a Reseller
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -139,6 +111,109 @@ export function Community() {
           })}
         </div>
       </div>
+
+      {/* Reseller Popup Modal */}
+      {showResellerPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100">
+            {/* Header */}
+            <div className="sticky top-0 bg-white rounded-t-2xl p-6 border-b border-gray-200 flex justify-between items-start">
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-2">Partner with SARIRA</h3>
+                <p className="text-muted-foreground">Let's build a healthier community — together.</p>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowResellerPopup(false)}
+                className="text-muted-foreground hover:text-primary hover:bg-gray-100 rounded-full p-2"
+              >
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Benefits Section */}
+                <div>
+                  <h4 className="font-bold text-xl text-primary mb-6">Why Partner with Us?</h4>
+                  <ul className="space-y-4 text-muted-foreground">
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-4 mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary">Attractive Wholesale Pricing</span>
+                        <p className="text-sm mt-1">Competitive margins and volume discounts for growing businesses</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-4 mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary">Fast-Moving Wellness Product</span>
+                        <p className="text-sm mt-1">Clean-label product with growing consumer demand</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-4 mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary">Marketing Support</span>
+                        <p className="text-sm mt-1">Promotional materials, social media content, and brand assets</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-4 mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary">Reliable Supply Chain</span>
+                        <p className="text-sm mt-1">Timely delivery and consistent product quality</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-4 mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary">Dedicated Support</span>
+                        <p className="text-sm mt-1">Personal account management and ongoing assistance</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Contact Section */}
+                <div className="flex flex-col justify-center space-y-6">
+                  <div>
+                    <h4 className="font-bold text-xl text-primary mb-4">Get Started Today</h4>
+                    <p className="text-muted-foreground mb-6">
+                      Ready to join our network of wellness partners? Contact us to learn more about our reseller program.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <Button 
+                      asChild 
+                      size="lg" 
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-all duration-300"
+                    >
+                      <a href={`mailto:${SITE_CONFIG.contact.email}?subject=Become a SARIRA Reseller&body=Hi SARIRA Team,%0D%0A%0D%0AI'm interested in becoming a reseller for your products.%0D%0A%0D%0APlease provide more information about:%0D%0A- Wholesale pricing%0D%0A- Minimum order quantities%0D%0A- Delivery terms%0D%0A- Marketing support%0D%0A%0D%0AThank you!`}>
+                        📧 Email Us to Get Started
+                      </a>
+                    </Button>
+                    
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      size="lg" 
+                      className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                    >
+                      <a href={SITE_CONFIG.contact.whatsapp} target="_blank" rel="noopener noreferrer">
+                        💬 WhatsApp Us
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

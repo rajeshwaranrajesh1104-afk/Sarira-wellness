@@ -94,6 +94,81 @@
     box-shadow: 0 10px 25px rgba(54, 74, 34, 0.15);
   }
   
+  /* Journal Article Animations */
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fade-in-delay 1.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay-2 {
+    animation: fade-in-delay-2 2s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+  }
+  
+  /* Journal Article Typography */
+  .prose {
+    @apply text-gray-800;
+  }
+  
+  .prose p {
+    @apply mb-6 leading-relaxed;
+  }
+  
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-primary font-bold mb-4 mt-8;
+  }
+  
+  .prose h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  .prose h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  .prose h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  .prose ul, .prose ol {
+    @apply mb-6 pl-6;
+  }
+  
+  .prose li {
+    @apply mb-2;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-[#E38A30] pl-6 italic text-gray-700 my-6;
+  }
+  
+  .prose strong {
+    @apply font-bold text-primary;
+  }
+  
+  .prose em {
+    @apply italic text-gray-700;
+  }
+  
+  /* Breadcrumb styling */
+  .breadcrumb-link {
+    @apply hover:text-[#E38A30] transition-colors duration-200;
+  }
+  
   /* Responsive typography improvements */
   @media (max-width: 768px) {
     h1 { font-size: 2rem; line-height: 1.2; }
@@ -114,5 +189,59 @@
     h2 { font-size: 2.25rem; line-height: 1.3; }
     h3 { font-size: 2rem; line-height: 1.4; }
     p { font-size: 1.125rem; line-height: 1.7; }
+  }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    /* Prevent zoom on input focus */
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+    
+    /* Improve touch targets */
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Optimize scrolling on mobile */
+    body {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Improve text readability on mobile */
+    p, span, div {
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Optimize hero section for mobile */
+    #home-section {
+      min-height: 100vh;
+      padding-top: 5rem;
+      padding-bottom: 2rem;
+    }
+    
+    /* Journal article mobile optimization */
+    .prose {
+      @apply text-base leading-relaxed;
+    }
+    
+    .prose h1 {
+      @apply text-2xl;
+    }
+    
+    .prose h2 {
+      @apply text-xl;
+    }
+    
+    .prose h3 {
+      @apply text-lg;
+    }
   }
 }

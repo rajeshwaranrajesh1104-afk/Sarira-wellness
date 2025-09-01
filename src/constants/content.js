@@ -309,40 +309,132 @@ export const JOURNAL = {
   subtitle: "Discover the stories behind our ingredients and traditions",
   posts: [
     {
-      title: "Nature’s Sweetness: Fig, Honey, and Jaggery Traditions",
+      id: "natures-sweetness",
+      title: "Nature's Sweetness: Fig, Honey, and Jaggery Traditions",
       description: "A visual journey through time-honored natural sweeteners used in Tamil homes for balanced energy and wholesome taste.",
       image: "src/assets/images/journal/image01.jpg",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image02.jpg",
+        "src/assets/images/journal/image03.jpg"
+      ],
+      fullArticle: `In Tamil households, sweetness has always been more than just a taste—it's a philosophy of nourishment. For generations, our ancestors turned to nature's own sweeteners: figs, honey, and jaggery, each carrying not just flavor but healing properties.
+
+Figs (அத்திப்பழம்) have been revered in Tamil culture for their gentle sweetness and digestive benefits. Rich in fiber and natural sugars, they provide sustained energy without the sharp spikes that refined sugar causes. Our grandmothers would soak dried figs overnight and serve them with warm milk, creating a natural energy drink that supported both children and elders.
+
+Honey (தேன்) holds a special place in Siddha medicine as a natural antibiotic and energy booster. Pure, raw honey from local beekeepers was used not just for sweetness, but for its healing properties. A spoonful of honey with warm water was a daily ritual for maintaining gut health and immunity.
+
+Jaggery (வெல்லம்), the unrefined sugar from sugarcane or palm, is perhaps the most versatile of all. Rich in minerals like iron and calcium, it's been used in traditional sweets, porridges, and even savory dishes. Unlike white sugar, jaggery retains its natural nutrients and provides a complex, caramel-like sweetness that enhances rather than overwhelms.
+
+These natural sweeteners teach us an important lesson: sweetness should nourish, not just satisfy. They remind us that the best foods are those that have been part of our cultural wisdom for centuries, offering both pleasure and health in perfect balance.`,
+      link: "/journal/natures-sweetness"
     },
     {
+      id: "everyday-wellness",
       title: "Everyday Wellness in the Tamil Kitchen",
       description: "Scenes from a warm, working kitchen where simple, fresh ingredients become deeply nourishing food.",
       image: "src/assets/images/journal/image02.jpg",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image03.jpg",
+        "src/assets/images/journal/image04.png"
+      ],
+      fullArticle: `The Tamil kitchen is more than a place to cook—it's a sanctuary of wellness, where every ingredient is chosen with intention and every meal becomes an act of care. Here, wellness isn't a trend but a way of life, passed down through generations of mothers and grandmothers who understood that food is medicine.
+
+Morning rituals begin with gentle, warming foods that prepare the body for the day ahead. A simple porridge of rice and lentils, flavored with ginger and cumin, provides sustained energy without heaviness. Fresh coconut, grated and mixed with jaggery, offers natural sweetness and healthy fats that support brain function.
+
+The midday meal is a symphony of colors and flavors, each dish serving a specific purpose. Bitter greens like moringa leaves (முருங்கை) support liver health, while turmeric-infused rice provides natural anti-inflammatory benefits. Yogurt, a staple in every Tamil meal, supports gut health and provides cooling balance to spicy dishes.
+
+Evening meals are lighter, focusing on easily digestible foods that prepare the body for rest. Warm milk with SARIRA Fig Malt becomes a comforting ritual, providing natural sweetness and nutrients that support peaceful sleep.
+
+What makes the Tamil kitchen truly special is its philosophy: food should not just fill the stomach but nourish the soul. Every ingredient is respected for its unique properties, every meal is prepared with love, and every bite is an opportunity to connect with tradition and wellness.`,
+      link: "/journal/everyday-wellness"
     },
     {
+      id: "food-as-care",
       title: "Food as Care: Postpartum and Family Nourishment",
       description: "Gentle, restorative foods rooted in tradition that support mothers, children, and elders alike.",
       image: "src/assets/images/journal/image03.jpg",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image04.png",
+        "src/assets/images/journal/image05.jpg"
+      ],
+      fullArticle: `In Tamil culture, food is the first medicine, especially during life's most vulnerable moments. The postpartum period, in particular, is treated with deep reverence, where every meal is designed to heal, restore, and nourish both mother and child.
+
+The first forty days after childbirth are considered sacred—a time when the mother's body needs gentle, warming foods that support recovery and milk production. Traditional postpartum meals include soft, easily digestible foods like rice kanji (கஞ்சி), a thin porridge made with rice and water, flavored with ginger and cumin for digestive support.
+
+SARIRA Fig Malt plays a crucial role in postpartum nutrition, providing natural sweetness and essential nutrients without the harshness of refined sugar. Mixed with warm milk, it becomes a comforting drink that supports energy levels and provides the iron and calcium that new mothers need.
+
+For children, food is approached with the understanding that growing bodies need both nutrition and gentle care. Meals are designed to be appealing to young palates while providing the building blocks for healthy development. Fresh fruits, nuts, and whole grains form the foundation, while traditional sweets made with jaggery and coconut satisfy the natural desire for sweetness.
+
+Elders receive special attention in the Tamil kitchen, with foods that are easy to digest and rich in nutrients that support aging bodies. Warm, soft foods like idli and dosa provide protein and energy, while herbal teas and warm milk with SARIRA offer comfort and nutrition.
+
+This approach to food as care teaches us that nourishment is about more than just calories—it's about love, tradition, and the wisdom of generations who understood that the best medicine comes from the kitchen.`,
+      link: "/journal/food-as-care"
     },
     {
+      id: "siddha-wisdom",
       title: "Siddha Wisdom at Home: Healing Through Ingredients",
       description: "A look at everyday ingredients through the Siddha lens—balancing body, mind, and spirit.",
       image: "src/assets/images/journal/image04.png",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image05.jpg",
+        "src/assets/images/journal/image06.jpg"
+      ],
+      fullArticle: `Siddha medicine, one of India's oldest healing systems, teaches us that every ingredient in our kitchen has the power to heal. This ancient wisdom, rooted in Tamil culture, views food as medicine and the kitchen as a pharmacy where nature's healing properties are harnessed for wellness.
+
+Turmeric (மஞ்சள்) is perhaps the most celebrated of all Siddha ingredients. Its active compound, curcumin, provides powerful anti-inflammatory and antioxidant benefits. In traditional Tamil homes, turmeric milk (மஞ்சள் பால்) is a daily ritual, especially during cold and flu season, supporting immunity and reducing inflammation.
+
+Ginger (இஞ்சி) is another cornerstone of Siddha wisdom, valued for its warming properties and digestive benefits. Fresh ginger tea, often combined with honey and lemon, is used to soothe upset stomachs, reduce nausea, and boost circulation. Its warming nature makes it particularly beneficial during cold weather.
+
+Coconut (தேங்காய்), in all its forms, is considered a complete food in Siddha medicine. Coconut oil is used for cooking and skin care, while fresh coconut water provides natural electrolytes and hydration. Grated coconut adds healthy fats and fiber to meals, supporting brain health and digestion.
+
+Black pepper (மிளகு) is not just a spice but a powerful digestive aid in Siddha tradition. It enhances the absorption of other nutrients, particularly turmeric, and supports healthy digestion. A pinch of black pepper in warm milk with SARIRA Fig Malt creates a digestive tonic that supports gut health.
+
+This Siddha approach to ingredients reminds us that healing doesn't always require expensive supplements or complex treatments. Sometimes, the most powerful medicine is already in our kitchen, waiting to be used with intention and wisdom.`,
+      link: "/journal/siddha-wisdom"
     },
     {
+      id: "growing-strong",
       title: "Growing Strong: Nutrition for Active Kids",
       description: "Wholesome meals and snacks that fuel play, learning, and healthy growth—without refined sugar.",
       image: "src/assets/images/journal/image05.jpg",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image06.jpg",
+        "src/assets/images/journal/image01.jpg"
+      ],
+      fullArticle: `Children's nutrition is about more than just feeding growing bodies—it's about building healthy habits that will last a lifetime. In Tamil culture, children's food is approached with the understanding that every meal shapes not just their bodies, but their relationship with food and wellness.
+
+The foundation of children's nutrition in Tamil homes is whole, unprocessed foods that provide sustained energy for active play and learning. Rice, lentils, and vegetables form the base of most meals, providing complex carbohydrates, protein, and essential vitamins and minerals.
+
+For snacks, traditional Tamil wisdom offers healthy alternatives to processed foods. Fresh fruits like bananas and mangoes provide natural sweetness and energy, while nuts and seeds offer healthy fats and protein. SARIRA Fig Malt becomes a versatile ingredient, mixed with warm milk for a nutritious drink or spread on whole grain toast for a satisfying snack.
+
+Breakfast is considered the most important meal for children, setting the tone for their energy levels throughout the day. Traditional breakfasts like idli and dosa provide protein and complex carbohydrates, while warm milk with SARIRA offers natural sweetness and essential nutrients.
+
+What makes Tamil children's nutrition special is its approach to sweetness. Instead of refined sugar, natural sweeteners like jaggery, honey, and figs are used, teaching children to appreciate the complex flavors of natural foods while avoiding the energy crashes that come with processed sugars.
+
+This approach to children's nutrition teaches us that healthy eating isn't about restriction—it's about abundance, variety, and the joy of sharing wholesome, delicious food with the ones we love.`,
+      link: "/journal/growing-strong"
     },
     {
+      id: "gut-health",
       title: "Gut Health, Inner Balance",
       description: "Fermented foods, fiber-rich fruits, and mindful eating—timeless practices for a happy gut.",
       image: "src/assets/images/journal/image06.jpg",
-      link: "/tamil-culture"
+      additionalImages: [
+        "src/assets/images/journal/image01.jpg",
+        "src/assets/images/journal/image02.jpg"
+      ],
+      fullArticle: `In Tamil culture, gut health is considered the foundation of overall wellness. The ancient wisdom of Siddha medicine teaches us that a healthy digestive system is the key to vitality, immunity, and mental clarity. This understanding has shaped traditional Tamil eating practices for generations.
+
+Fermented foods play a crucial role in maintaining gut health. Yogurt (தயிர்) is a daily staple, providing beneficial probiotics that support healthy gut bacteria. Traditional fermented foods like idli and dosa are not just delicious—they're also easier to digest and provide prebiotic fiber that feeds beneficial gut bacteria.
+
+Fiber-rich fruits, particularly figs, are essential for gut health. Figs are naturally high in fiber, supporting regular digestion and providing food for beneficial gut bacteria. SARIRA Fig Malt, made from organic figs, becomes a natural way to support gut health while satisfying the desire for sweetness.
+
+Mindful eating practices are deeply embedded in Tamil culture. Meals are eaten slowly, with gratitude, and often in the company of family. This approach to eating supports proper digestion by allowing the body to properly process and absorb nutrients.
+
+Traditional Tamil meals also include ingredients that specifically support gut health. Ginger and cumin are used not just for flavor, but for their digestive benefits. Turmeric supports gut inflammation, while coconut provides healthy fats that support gut lining health.
+
+This holistic approach to gut health reminds us that wellness isn't just about what we eat, but how we eat. It's about creating a relationship with food that supports not just our bodies, but our overall sense of wellbeing and connection to tradition.`,
+      link: "/journal/gut-health"
     }
   ]
 };

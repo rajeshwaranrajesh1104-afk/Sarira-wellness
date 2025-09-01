@@ -61,43 +61,69 @@ export function Hero() {
   }, [isMounted, headlineIndex]);
 
   return (
-    <section id="home-section" className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden">
+    <section id="home-section" className="relative min-h-[90vh] flex items-center pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
           src={heroBg} 
           alt="Hero Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
       </div>
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#364A22]/90 via-[#4A5F2E]/80 to-[#E38A30]/70 backdrop-blur-[2px]"></div>
       
-      <div className="container mx-auto px-4 flex flex-col items-center justify-center relative z-10 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center relative z-10 gap-8 md:gap-12">
         {/* Centered text content */}
         <div className="w-full text-center">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-headline text-white mb-4">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline text-white mb-4 leading-tight">
             Welcome to SARIRA Wellness
           </p>
-          <h1 className="text-[#E38A30] font-body mb-2 text-2xl h-8">
+          <h1 className="text-[#E38A30] font-body mb-2 text-xl sm:text-2xl h-8">
             <span>{typedHeadline}</span>
             <span className="animate-pulse">|</span>
           </h1>
           
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4 sm:px-6">
             {HERO.subtitle}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#E38A30] text-white hover:bg-[#E38A30]/90 shadow-lg">
-              <Link to="/product">Try Fig Malt</Link>
-            </Button>
-            <Button asChild size="lg" variant="custom" className="!bg-[#E38A30] !text-white hover:!bg-[#364A22] !shadow-lg transition-all duration-300">
-              <Link to="/tamil-culture">Learn our story</Link>
-            </Button>
+          {/* CTA Buttons - Mobile Optimized with Creative Design */}
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center w-full max-w-lg mx-auto px-4 sm:px-0">
+            {/* Try Fig Malt Button - Primary CTA */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#E38A30] to-[#F4A261] rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <Button 
+                asChild 
+                size="lg" 
+                className="relative bg-gradient-to-r from-[#E38A30] to-[#F4A261] text-white hover:from-[#F4A261] hover:to-[#E38A30] shadow-xl hover:shadow-2xl w-full sm:w-auto px-8 py-4 text-lg md:text-xl font-bold border-0 transform hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/product" className="flex items-center gap-2">
+                  <span>🍃</span>
+                  <span>Try Fig Malt</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Learn Our Story Button - Secondary CTA */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#364A22] to-[#4A5F2E] rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="custom" 
+                className="relative bg-gradient-to-r from-[#364A22] to-[#4A5F2E] text-white hover:from-[#4A5F2E] hover:to-[#364A22] shadow-xl hover:shadow-2xl w-full sm:w-auto px-8 py-4 text-lg md:text-xl font-bold border-2 border-white/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+              >
+                <Link to="/tamil-culture" className="flex items-center gap-2">
+                  <span>Learn Our Story</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </Link>
+              </Button>
+            </div>
           </div>
           
-          <div className="mt-12 max-w-3xl mx-auto">
+          <div className="mt-8 sm:mt-12 max-w-4xl mx-auto px-4 sm:px-6">
             <div className="bg-white/20 rounded-xl p-6 shadow-lg border border-white/30 mb-12 backdrop-blur-sm animate-[floating_3s_ease-in-out_infinite] hover:shadow-xl">
               <p className="text-center text-lg font-semibold text-[#FFFFFF]">
                 {HERO.guarantee}

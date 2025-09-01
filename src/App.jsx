@@ -11,6 +11,7 @@ import TermsOfServicePage from './pages/TermsOfServicePage'
 import ShippingDeliveryPage from './pages/ShippingDeliveryPage'
 import ReturnsRefundsPage from './pages/ReturnsRefundsPage'
 import StoreLocatorPage from './pages/StoreLocatorPage'
+import JournalArticlePage from './pages/JournalArticlePage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/recipes" element={<RecipesPage />} />
         <Route path="/tamil-culture" element={<TamilCulturePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/journal/:id" element={<JournalArticlePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms-of-service" element={<TermsOfServicePage />} />
         <Route path="/shipping-and-delivery" element={<ShippingDeliveryPage />} />
